@@ -8,4 +8,8 @@ author: null
 show_tile: false
 ---
 
-Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.
+I am an aspiring Computer Science student, originating from Bulgaria and situated in the United Kingdom. 
+I will use this space to organise previous/current projects and to archive pieces of writing that I find particularly interesting.
+For small web applications I like to use P5.js in conjunction with OpenProcessing, where the majority of my sketches are games or visualisations of mathematical concepts. 
+I have used C# with the Unity Engine since 2018 for making similar projects, but now I prefer lower level programming in C/C++.
+For papers, I use the LaTeX markup language.

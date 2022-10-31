@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Generic
-description: Lorem ipsum dolor est
+title: Code
+description: Usefull snippets of code I often reuse.
 image: assets/images/pic11.jpg
 nav-menu: true
 ---

@@ -37,12 +37,12 @@ Here are some write-ups of concepts that I found useful or interesting. Most are
 			<tr>
 				<td>Using Newton's Method To Render Fractal Geometries</td>
 				<td>The derivation of Newton's Method, and how it is used to generate fractal like shapes in the complex plane.</td>
-				<td><a href="assets/papers/DataStructuresToRepresentGraphNetworksMichaelIvanov.pdf">PDF</a></td>
-			</tr>
+				<td><a href="assets/papers/UsingNewtonsMethodToRenderFractalGeometriesMichaelIvanov.pdf">PDF</a></td>
+			</tr> 
 			<tr>
 				<td>Data Structures To Represent Graph Networks</td>
 				<td>A comparison of different ways in code to represent a graph network.</td>
-				<td><a href="assets/papers/UsingNewtonsMethodToRenderFractalGeometriesMichaelIvanov.pdf">PDF</a></td>
+				<td><a href="assets/papers/DataStructuresToRepresentGraphNetworksMichaelIvanov.pdf">PDF</a></td>
 			</tr>
 		</tbody>
 	</table>

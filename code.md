@@ -2,7 +2,7 @@
 layout: post
 title: Code
 layout : landing
-description: Usefull snippets of code I often reuse.
+description: Useful snippets of code I often reuse.
 image: assets/images/code.jpg
 nav-menu: true
 ---
@@ -47,13 +47,13 @@ nav-menu: true
 			</tr>
 			<tr>
 				<td>Time of day in milliseconds</td>
-				<td>time.h sys <br> time.h</td>
+				<td>sys/time.h</td>
 				<td>
 <pre><code>long long Time() {
-  struct timeval te; 
-  gettimeofday(&te, NULL);
-  long long milliseconds = te.tv_sec*1000LL + te.tv_usec/1000;
-  return milliseconds;
+	struct timeval te; 
+	gettimeofday(&te, NULL);
+	long long milliseconds = te.tv_sec*1000LL + te.tv_usec/1000;
+	return milliseconds;
 }
 </code></pre>
 				</td>
@@ -64,15 +64,35 @@ nav-menu: true
 				<td>
 <pre><code>char* loadfile(char* file, long* size)
 {
-  FILE* fp = fopen ( file , "rb" );
-  fseek( fp , 0L , SEEK_END);
-  long lSize = ftell( fp );
-  rewind( fp );
-  char* buffer = calloc( 1, lSize+1 );
-  fread( buffer , lSize, 1 , fp);
-  fclose(fp);
-  *size = lSize;
-  return buffer;
+	FILE* fp = fopen (file, "r");
+	fseek(fp, 0L, SEEK_END);
+	long lSize = ftell(fp);
+	rewind(fp);
+	char* buffer = calloc(1, lSize+1);
+	fread(buffer, lSize, 1 ,fp);
+	fclose(fp);
+	*size = lSize;
+	return buffer;
+}
+</code></pre>
+				</td>
+			</tr>
+			<tr>
+				<td>Read file to wchar_t*</td>
+				<td>stdlib.h</td>
+				<td>
+<pre><code>wchar_t* _wloadfile(wchar_t* file, long* size)
+{
+	FILE* fp = _wfopen(file, L"r");
+	fseek(fp, 0L, SEEK_END);
+	long lSize = ftell(fp);
+	rewind(fp);
+	wchar_t* buffer = (wchar_t*)calloc(sizeof(wchar_t), lSize + 1);
+	for (int i = 0; i < lSize; i++)
+		*(buffer+i) = fgetwc(fp);
+	fclose(fp);
+	*size = lSize;
+	return buffer;
 }
 </code></pre>
 				</td>
@@ -83,9 +103,9 @@ nav-menu: true
 				<td>
 <pre><code>int rand_from(int from, int to)
 {
-  static int seed=0;
-  seed++;
-  return (rand()%(to-from+1)) + from;
+	static int seed=0;
+	seed++;
+	return (rand()%(to-from+1)) + from;
 }
 </code></pre>
 				</td>
@@ -119,8 +139,8 @@ nav-menu: true
 				<td>string <br> fstream</td>
 				<td>
 <pre><code>std::string Read(const std::string& path) {
-    std::ifstream input_file(path);
-    return std::string((std::istreambuf_iterator&lt;char&gt;(input_file)), std::istreambuf_iterator&lt;char&gt;());
+	std::ifstream input_file(path);
+	return std::string((std::istreambuf_iterator&lt;char&gt;(input_file)), std::istreambuf_iterator&lt;char&gt;());
 }</code></pre>
 				</td>
 			</tr>
@@ -129,7 +149,7 @@ nav-menu: true
 				<td>time <br> chrono</td>
 				<td>
 <pre><code>int Time() {
-  return std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(std::chrono::system_clock::now().time_since_epoch()).count();
+	return std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(std::chrono::system_clock::now().time_since_epoch()).count();
 }</code></pre>
 				</td>
 			</tr>
@@ -139,8 +159,8 @@ nav-menu: true
 				<td>
 <pre><code>for (auto const& x : MAPNAME)
 {
-  //x.first = key
-  //x.second = value
+	//x.first = key
+	//x.second = value
 }</code></pre>
 				</td>
 			</tr>

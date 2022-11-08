@@ -168,3 +168,38 @@ nav-menu: true
 
 	</table>
 </div>
+
+
+<!-- Three-->
+<section id="three">
+	<div class="inner">
+		<header class="major">
+			<h1>Other Useful Libraries</h1>
+		</header>
+
+<!-- Content -->
+External libraries (not my own) that I often use.
+<div class="table-wrapper">
+	<table class="alt">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Description</th>
+				<th>Link</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>OFFD</td>
+				<td>C library to open the file dialog window.</td>
+				<td><a href="https://github.com/JoshuaManton/offd">Github</a></td>
+			</tr>
+			<tr>
+				<td>cImGui</td>
+				<td>A C wrapper for the ImGui library (orignally in C++).</td>
+				<td><a href="https://github.com/cimgui/cimgui">Github</a></td>
+			</tr>
+		</tbody>
+
+	</table>
+</div>

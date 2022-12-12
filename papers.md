@@ -44,6 +44,16 @@ Here are some write-ups of concepts that I found useful or interesting. Most are
 				<td>A comparison of different ways in code to represent a graph network.</td>
 				<td><a href="assets/papers/DataStructuresToRepresentGraphNetworksMichaelIvanov.pdf">PDF</a></td>
 			</tr>
+			<tr>
+				<td>Barycentric Coordinate Systems</td>
+				<td>How triangles are mapped to eachother in computer graphics.</td>
+				<td><a href="assets/papers/BarycentricCoordinateSystemsMichaelIvanov.pdf">PDF</a></td>
+			</tr>
+			<tr>
+				<td>Trigonometric Periodicity</td>
+				<td>Derviation of sequences to give solutions to trigonometric equations.</td>
+				<td><a href="assets/papers/TrigonometricPeriodicityMichaelIvanov.pdf">PDF</a></td>
+			</tr>
 		</tbody>
 	</table>
 </div>

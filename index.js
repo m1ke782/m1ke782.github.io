@@ -68,10 +68,10 @@ class Nav
 		//return bounds (adjusted to fit box)
 		return int(bx) + int(by)*3;
 	}
-	Click()
+	Click(x,y)
 	{
 		//get over
-		let over = this.Over(mouseX, mouseY);
+		let over = this.Over(x,y);
 		if (over == -1)
 			return;
 
@@ -94,8 +94,6 @@ class Nav
 			if (this.puzzle[i].target)
 				num += 2**i;
 		}
-
-		console.log(num);
 
 		//set
 		if (num in LINKS) 
@@ -170,7 +168,8 @@ function setup()
 	
 	NAV = new Nav();
 }
-function mouseClicked() {NAV.Click();}
+function mouseClicked() {NAV.Click(mouseX, mouseY);}
+function tapStarted() {NAV.Click(touches[0].x, touches[0].y);}
 function keyPressed()
 {
 	if (!isNaN(key))

@@ -169,7 +169,7 @@ function setup()
 	NAV = new Nav();
 }
 function mouseClicked() {NAV.Click(mouseX, mouseY);}
-function tapStarted() {NAV.Click(touches[0].x, touches[0].y);}
+function touchStarted() {NAV.Click(touches[0].x, touches[0].y);}
 function keyPressed()
 {
 	if (!isNaN(key))
